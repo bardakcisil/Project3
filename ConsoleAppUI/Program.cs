@@ -33,3 +33,4 @@ namespace ConsoleAppUI
     }
 }
 //dto data transformation object
+//aynı anda 1den fazla 1 sey dondurmek istersek encapsulation uygulammaiz lazim
