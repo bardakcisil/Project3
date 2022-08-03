@@ -49,6 +49,7 @@ namespace Business.Concrete
             return new SuccessResult(Messages.ProductAdded);
         }
 
+        [CacheAspect] //keyvalue
             public IDataResult<List<Product>> GetAll()
         {
             if (DateTime.Now.Hour == 18)
@@ -57,6 +58,7 @@ namespace Business.Concrete
             }
             return new SuccessDataResult<List<Product>>(_productDal.GetAll(),Messages.ProductListed);    
         }
+
 
         public IDataResult<List<Product>> GetAllByCategoryId(int id)
         {
