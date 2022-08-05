@@ -5,6 +5,7 @@ using Entities.Concrete;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using System.Threading;
 
 namespace WebAPI.Controllers
 {
@@ -25,7 +26,8 @@ namespace WebAPI.Controllers
         public IActionResult GetAll()
         {
             //dependency chain
-            
+
+            Thread.Sleep(5000);
             var result = _productService.GetAll();
             if(result.Success)
             {
